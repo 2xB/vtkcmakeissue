@@ -17,6 +17,11 @@ jobs:
         dnf install -y \
             @development-tools cmake cmake-gui \
             vtk vtk-qt vtk-devel
+    - name: Upload files as artifacts as requested
+      uses: actions/upload-artifact@v3
+      with:
+        name: vtk-module-find-packages
+        path: /usr/lib64/cmake/vtk/*-vtk-module-find-packages.cmake
     - name: Build code
       run: sh run_test.sh
       shell: bash
