@@ -16,7 +16,7 @@ jobs:
       run: |
         dnf install -y \
             @development-tools cmake cmake-gui \
-            vtk vtk-qt vtk-devel
+            vtk vtk-qt vtk-devel json-devel
     - name: Build code
       run: sh run_test.sh
       shell: bash
